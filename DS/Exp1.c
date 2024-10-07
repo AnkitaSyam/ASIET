@@ -105,10 +105,3 @@ void main()
     }
     while(choice!=3);
 }
-
- 
- 
- 
- 
- 
-
