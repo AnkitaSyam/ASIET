@@ -7,8 +7,11 @@ class Student {
         this.id = id;
         this.name = name;
         this.dept = dept;
-    }   
-    
+    }  
+
+    public void finalize() {
+        System.out.println("Student object is garbage collected.");
+    }
 }
 
 public class GCTest {
