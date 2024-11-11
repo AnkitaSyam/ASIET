@@ -142,7 +142,12 @@ public class Calculator_Swing implements ActionListener {
             } else if(operator == MUL) {
                 result = num1 * num2;
             } else if(operator == DIV) {
-                result = num1 / num2;
+                if (num2 == 0) {  // Check for division by zero
+                    edit.setText("Error");
+                    return;
+                } else {
+                    result = num1 / num2;
+                }
             }
             edit.setText(String.valueOf(result));
         } else if(b == bCancel) {
