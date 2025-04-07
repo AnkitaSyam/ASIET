@@ -31,7 +31,9 @@ void best_fit(int blocks, int blockSize[], int processes, int processSize[]) {
     int i, j, bestIdx;
     int allocation[10];
 
-    for (i = 0; i < processes; i++) allocation[i] = -1;
+    for (i = 0; i < processes; i++) {
+        allocation[i] = -1;
+    }
 
     for (i = 0; i < processes; i++) {
         bestIdx = -1;
@@ -62,8 +64,10 @@ void worst_fit(int blocks, int blockSize[], int processes, int processSize[]) {
     int i, j, worstIdx;
     int allocation[10];
 
-    for (i = 0; i < processes; i++) allocation[i] = -1;
-
+    for (i = 0; i < processes; i++) {
+        allocation[i] = -1;
+    }
+    
     for (i = 0; i < processes; i++) {
         worstIdx = -1;
         for (j = 0; j < blocks; j++) {
